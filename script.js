@@ -25,5 +25,18 @@ $(document).ready(function() {
     $plannerDiv.empty();
 
     if (test) {console.log("current time", nowHour12); }
-    
+
 })
+function updateRowColor ($hourRow,hour) {
+    if (test) { console.log("row color ", nowHour24, hour); }
+    if (hour < nowHour24) {
+        if (test) { console.log("lessThan"); }
+      $hourRow.css("background-color","lightgrey")
+    } else if ( hour > nowHour24) {
+      if (test) { console.log("greaterthan"); }
+      $hourRow.css("background-color","lightgreen")
+    } else {
+      if (test) { console.log("eqaul"); }
+      $hourRow.css("background-color","tomato")
+    }
+    }
